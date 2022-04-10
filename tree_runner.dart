@@ -1,9 +1,9 @@
+import 'composite_node.dart';
 import 'node_state_enum.dart';
-import 'sequence_node.dart';
 
 class TreeRunner {
-  const TreeRunner(SequenceNode nodeTree) : _nodeTree = nodeTree;
-  final SequenceNode _nodeTree;
+  const TreeRunner(CompositeNode nodeTree) : _nodeTree = nodeTree;
+  final CompositeNode _nodeTree;
 
   NodeState start() {
     NodeState result = NodeState.running;
