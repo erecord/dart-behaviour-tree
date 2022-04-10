@@ -2,13 +2,15 @@ import 'composite_node.dart';
 import 'node_state_enum.dart';
 
 class TreeRunner {
-  const TreeRunner(CompositeNode nodeTree) : _nodeTree = nodeTree;
-  final CompositeNode _nodeTree;
+  const TreeRunner(this.rootNode);
+
+  @protected
+  final CompositeNode rootNode;
 
   NodeState start() {
     NodeState result = NodeState.running;
     while (result == NodeState.running) {
-      result = _nodeTree.evaluate();
+      result = rootNode.evaluate();
       switch (result) {
         case NodeState.success:
           // Do nothing
