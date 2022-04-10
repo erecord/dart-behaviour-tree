@@ -6,6 +6,7 @@ abstract class CompositeNode extends Node {
   const CompositeNode(NodeIterator nodeIterator) : _nodeIterator = nodeIterator;
   final NodeIterator _nodeIterator;
   void onNewState(NodeState newState);
+  bool get iteratorIsAtEnd => !_nodeIterator.canMoveNextAgain;
   @override
   NodeState evaluate() {
     late NodeState newState;
@@ -16,4 +17,6 @@ abstract class CompositeNode extends Node {
 
     return newState;
   }
+
+  void resetNode() => _nodeIterator.resetIterator();
 }

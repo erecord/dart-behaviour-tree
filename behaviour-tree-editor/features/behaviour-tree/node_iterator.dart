@@ -14,4 +14,6 @@ class NodeIterator {
 
     return canMoveNextAgain;
   }
+
+  void resetIterator() => _activeIndex = 0;
 }

@@ -8,15 +8,16 @@ class SimpleTreeRunnerStrategy extends TreeRunnerStrategy {
     NodeState result = NodeState.running;
     while (result == NodeState.running) {
       result = rootNode.evaluate();
-      switch (result) {
-        case NodeState.success:
-          // Do nothing
-          break;
-        case NodeState.failure:
-          print("Behaviour tree error.");
-          break;
-        default:
-      }
+      // switch (result) {
+      //   case NodeState.success:
+      //     // Do nothing
+      //     break;
+      //   case NodeState.failure:
+      //     // Do nothing
+      //     break;
+      //   default:
+      // }
+      print("SimpleTreeRunnerStrategy - Result: $result");
     }
 
     return result;
