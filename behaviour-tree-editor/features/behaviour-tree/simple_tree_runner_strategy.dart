@@ -1,13 +1,10 @@
 import 'composite_node.dart';
 import 'node_state_enum.dart';
+import 'tree_runner_strategy.dart';
 
-class TreeRunner {
-  const TreeRunner(this.rootNode);
-
-  @protected
-  final CompositeNode rootNode;
-
-  NodeState start() {
+class SimpleTreeRunnerStrategy extends TreeRunnerStrategy {
+  @override
+  NodeState start(CompositeNode rootNode) {
     NodeState result = NodeState.running;
     while (result == NodeState.running) {
       result = rootNode.evaluate();

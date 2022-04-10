@@ -1,15 +1,13 @@
 import 'composite_node.dart';
 import 'node_state_enum.dart';
-import 'tree_runner.dart';
+import 'tree_runner_strategy.dart';
 
-class RepeatUntilFailTreeRunner extends TreeRunner {
-  const RepeatUntilFailTreeRunner(CompositeNode rootNode) : super(rootNode);
-
+class RepeatUntilFailTreeRunner extends TreeRunnerStrategy {
   @override
-  NodeState start() {
+  NodeState start(CompositeNode rootNode) {
     NodeState result = NodeState.running;
     while (result == NodeState.running) {
-      result = _nodeTree.evaluate();
+      result = rootNode.evaluate();
       switch (result) {
         case NodeState.success:
           // Do nothing
