@@ -1,5 +1,5 @@
 import 'action_node.dart';
-import 'node_state_enum.dart';
+import '../node_state_enum.dart';
 
 class PrintMessageActionNode extends ActionNode {
   const PrintMessageActionNode(String message) : _message = message;
