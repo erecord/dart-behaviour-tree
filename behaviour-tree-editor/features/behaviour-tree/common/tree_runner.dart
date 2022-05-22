@@ -1,6 +1,6 @@
 import 'composite_node.dart';
 import 'node_state_enum.dart';
-import 'tree_runner_strategy.dart';
+import '../common/tree_runner_strategy.dart';
 
 class TreeRunner {
   const TreeRunner(

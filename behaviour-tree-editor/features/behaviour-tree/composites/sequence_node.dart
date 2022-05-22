@@ -1,6 +1,6 @@
-import 'composite_node.dart';
-import 'node_iterator.dart';
-import 'node_state_enum.dart';
+import '../common/composite_node.dart';
+import '../common/node_iterator.dart';
+import '../common/node_state_enum.dart';
 
 class SequenceNode extends CompositeNode {
   SequenceNode(NodeIterator nodeIterator) : super(nodeIterator);

@@ -1,6 +1,6 @@
-import 'composite_node.dart';
-import 'node_state_enum.dart';
-import 'tree_runner_strategy.dart';
+import '../common/composite_node.dart';
+import '../common/node_state_enum.dart';
+import '../common/tree_runner_strategy.dart';
 
 class SimpleTreeRunnerStrategy extends TreeRunnerStrategy {
   @override
@@ -8,15 +8,6 @@ class SimpleTreeRunnerStrategy extends TreeRunnerStrategy {
     NodeState result = NodeState.running;
     while (result == NodeState.running) {
       result = rootNode.evaluate();
-      // switch (result) {
-      //   case NodeState.success:
-      //     // Do nothing
-      //     break;
-      //   case NodeState.failure:
-      //     // Do nothing
-      //     break;
-      //   default:
-      // }
       print("SimpleTreeRunnerStrategy - Result: $result");
     }
 

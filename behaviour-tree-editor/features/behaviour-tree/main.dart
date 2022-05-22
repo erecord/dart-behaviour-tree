@@ -1,9 +1,9 @@
 import 'actions/failing_action_node.dart';
-import 'node_iterator.dart';
+import 'common/node_iterator.dart';
 import 'actions/print_message_action_node.dart';
-import 'repeat_until_fail_tree_runner.dart';
-import 'sequence_node.dart';
-import 'tree_runner.dart';
+import 'tree_runner_strategies/repeat_until_fail_tree_runner.dart';
+import 'composites/sequence_node.dart';
+import 'common/tree_runner.dart';
 
 void main() {
   final node1 = PrintMessageActionNode("message 1 ");

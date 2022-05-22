@@ -1,6 +1,6 @@
-import 'composite_node.dart';
-import 'node_state_enum.dart';
-import 'tree_runner_strategy.dart';
+import '../common/composite_node.dart';
+import '../common/node_state_enum.dart';
+import '../common/tree_runner_strategy.dart';
 
 class RepeatUntilFailTreeRunner extends TreeRunnerStrategy {
   RepeatUntilFailTreeRunner({int? maxRetries}) : _maxRetries = maxRetries;
